@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 19:13:08 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/30 07:13:19 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/01 04:47:25 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int ac, char **av)
 {
 	t_node	*a;
 	t_node	*b;
-	t_lst_instruct	**instruct_bonus = NULL;
+	t_lst_instruct	*instruct_bonus = NULL;
 	int		size;
 	char	*line;
 
@@ -64,7 +64,7 @@ int	main(int ac, char **av)
 	line = get_next_line(0);
 	while (line)
 	{
-		execute_command(line, &a, &b, instruct_bonus);
+		execute_command(line, &a, &b, &instruct_bonus);
 		free(line);
 		line = get_next_line(0);
 	}
