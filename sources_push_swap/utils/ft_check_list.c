@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:15:50 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/30 07:27:22 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/01 03:12:53 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	ft_check_list(t_lst_instruct **instruct)
     current = *instruct;
     while (current && current->next)
     {
-	ft_printf("test\n");
         next = current->next;
         if (!ft_strcmp(current->instruction, "ra") && !ft_strcmp(next->instruction, "rb"))
         {

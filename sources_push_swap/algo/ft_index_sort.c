@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 22:49:27 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/30 05:34:04 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/01 03:14:19 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ void	ft_index_sort(t_node **a, t_node **b, int start, int end, t_lst_instruct **
 			(end)++;
 		}
 		else if ((*a)->index >= (end))
+		{
 			ra(a, instruct);
+		}
 	}
 	sort_next(a, b, instruct);
 }

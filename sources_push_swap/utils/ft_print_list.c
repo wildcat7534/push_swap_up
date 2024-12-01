@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:54:28 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/30 07:43:57 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/01 03:12:40 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ void	ft_print_list(t_lst_instruct **instruct)
     t_lst_instruct	*current;
 
     current = *instruct;
-    ft_printf("test\n");
-    ft_printf("instruct = %p\n", instruct);
-    ft_printf("current = %p\n", current);
+    //ft_printf("test\n");
+    //ft_printf("instruct = %p\n", instruct);
+    //ft_printf("current = %p\n", current);
     while (current)
     {
         //ft_printf("%s\n", current->instruction);
-        ft_printf("test print\n");
+        //ft_printf("test print\n");
         ft_printf("%s\n", current->instruction);
         current = current->next;
     }
