@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 22:41:04 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/30 05:31:08 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/08 18:49:59 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,3 @@ void	ss(t_node **stack_a, t_node **stack_b, t_lst_instruct **instruct)
 	sa(stack_a, instruct);
 	sb(stack_b, instruct);
 }
-

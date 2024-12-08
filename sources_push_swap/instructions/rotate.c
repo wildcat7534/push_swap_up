@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 22:40:06 by cmassol           #+#    #+#             */
-/*   Updated: 2024/12/01 03:13:00 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/08 18:49:02 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static void	rotate(t_node **stack)
 	current->next = change;
 	change->next = NULL;
 }
+
 void	ra(t_node **stack, t_lst_instruct **instruct)
 {
 	if (!*stack || !(*stack)->next)

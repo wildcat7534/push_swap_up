@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 03:08:48 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/06 04:05:45 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/08 18:17:44 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,19 @@ void	free_nodes(t_node *stack)
 	{
 		tmp = stack;
 		stack = stack->next;
+		free(tmp);
+	}
+}
+
+void	free_lst_instruct(t_lst_instruct *instruct)
+{
+	t_lst_instruct	*tmp;
+
+	while (instruct)
+	{
+		tmp = instruct;
+		instruct = instruct->next;
+		free(tmp->instruction);
 		free(tmp);
 	}
 }

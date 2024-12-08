@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:25:07 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/30 05:32:17 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/01 05:03:51 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	ft_sort(t_node **a, t_node **b, t_lst_instruct **instruct)
 {
-	int	start;
 	int	end;
 
-	start = 0;
 	if (stack_size(a) <= 100)
 		end = stack_size(a) / 8;
 	else if (stack_size(a) <= 300)
@@ -29,7 +27,7 @@ void	ft_sort(t_node **a, t_node **b, t_lst_instruct **instruct)
 	else if (stack_size(a) <= 10)
 		ft_sort_10_node(a, b, instruct);
 	else
-		ft_index_sort(a, b, start, end, instruct);
+		ft_index_sort(a, b, end, instruct);
 }
 
 int	stack_size(t_node **stack)

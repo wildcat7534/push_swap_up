@@ -13,7 +13,8 @@ SOURCES_PUSH_SWAP = sources_push_swap/utils/check_errors.c \
                     sources_push_swap/algo/ft_sort_three_node.c sources_push_swap/algo/ft_sort_10_node.c \
                     sources_push_swap/algo/ft_index_sort.c sources_push_swap/utils/ft_make_node.c \
                     sources_push_swap/utils/ft_free_mem.c sources_push_swap/utils/ft_check_list.c \
-					sources_push_swap/utils/ft_lst_instruc.c sources_push_swap/utils/ft_print_list.c
+					sources_push_swap/utils/ft_lst_instruc.c sources_push_swap/utils/ft_print_list.c \
+					sources_push_swap/utils/init_start.c
 
 SOURCES_CHECKER = sources_push_swap/checker_bonus.c
 

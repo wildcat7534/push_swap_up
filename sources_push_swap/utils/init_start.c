@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.h                                    :+:      :+:    :+:   */
+/*   init_start.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 19:11:39 by cmassol           #+#    #+#             */
-/*   Updated: 2024/12/08 18:18:19 by cmassol          ###   ########.fr       */
+/*   Created: 2024/12/08 18:46:51 by cmassol           #+#    #+#             */
+/*   Updated: 2024/12/08 18:47:52 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_BONUS_H
-# define CHECKER_BONUS_H
+#include "../../include/push_swap.h"
 
-# include "../libft/include/get_next_line.h"
-# include "push_swap.h"
-
-void	ft_error_bonus(char *line);
-void	execute_command(char *line, t_node **a, t_node **b,
-			t_lst_instruct **instruct);
-
-#endif
+void	init_start(t_node **a, t_node **b, t_lst_instruct **it)
+{
+	*a = NULL;
+	*b = NULL;
+	*it = NULL;
+}

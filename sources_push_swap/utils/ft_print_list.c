@@ -6,42 +6,21 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:54:28 by cmassol           #+#    #+#             */
-/*   Updated: 2024/12/01 03:12:40 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/08 18:42:35 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void    ft_free_list(t_lst_instruct **instruct)
-{
-    t_lst_instruct	*current;
-    t_lst_instruct	*next;
-
-    current = *instruct;
-    while (current)
-    {
-        next = current->next;
-        free(current->instruction);
-        free(current);
-        current = next;
-    }
-    *instruct = NULL;
-}
-
 void	ft_print_list(t_lst_instruct **instruct)
 {
-    t_lst_instruct	*current;
+	t_lst_instruct	*current;
 
-    current = *instruct;
-    //ft_printf("test\n");
-    //ft_printf("instruct = %p\n", instruct);
-    //ft_printf("current = %p\n", current);
-    while (current)
-    {
-        //ft_printf("%s\n", current->instruction);
-        //ft_printf("test print\n");
-        ft_printf("%s\n", current->instruction);
-        current = current->next;
-    }
-    ft_free_list(instruct);
+	current = *instruct;
+	while (current)
+	{
+		ft_printf("%s\n", current->instruction);
+		current = current->next;
+	}
+	free_lst_instruct(*instruct);
 }

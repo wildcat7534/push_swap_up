@@ -6,13 +6,13 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:22:40 by cmassol           #+#    #+#             */
-/*   Updated: 2024/11/30 05:33:27 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/08 18:50:35 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	ft_sort_10_node(t_node **stack_a, t_node **stack_b, t_lst_instruct **instruct)
+void	ft_sort_10_node(t_node **stack_a, t_node **stack_b, t_lst_instruct **li)
 {
 	t_node	*min_node;
 	int		min;
@@ -24,15 +24,15 @@ void	ft_sort_10_node(t_node **stack_a, t_node **stack_b, t_lst_instruct **instru
 		while ((*stack_a)->nb != min)
 		{
 			if (get_position_in_stack(stack_a, min) <= stack_size(stack_a) / 2)
-				ra(stack_a, instruct);
+				ra(stack_a, li);
 			else
-				rra(stack_a, instruct);
+				rra(stack_a, li);
 		}
-		pb(stack_a, stack_b, instruct);
+		pb(stack_a, stack_b, li);
 	}
-	ft_sort_three_node(stack_a, instruct);
+	ft_sort_three_node(stack_a, li);
 	while (stack_size(stack_b) > 0)
-		pa(stack_a, stack_b, instruct);
+		pa(stack_a, stack_b, li);
 }
 
 int	get_position_in_stack(t_node **stack, int value)

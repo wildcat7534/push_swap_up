@@ -6,41 +6,37 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 22:49:27 by cmassol           #+#    #+#             */
-/*   Updated: 2024/12/01 03:14:19 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/08 18:46:08 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	ft_index_sort(t_node **a, t_node **b, int start, int end, t_lst_instruct **instruct)
+void	ft_index_sort(t_node **a, t_node **b, int end, t_lst_instruct **ist)
 {
-	t_node	**current;
+	int	start;
 
+	start = 0;
 	index_init(a, stack_size((a)));
-	current = a;
-	while (*current)
-		current = &(*current)->next;
 	while (*a)
 	{
 		if ((*a)->index <= (start))
 		{
-			pb(a, b, instruct);
-			rb(b, instruct);
+			pb(a, b, ist);
+			rb(b, ist);
 			(start)++;
 			(end)++;
 		}
 		else if ((*a)->index > (start) && (*a)->index < (end))
 		{
-			pb(a, b, instruct);
+			pb(a, b, ist);
 			(start)++;
 			(end)++;
 		}
 		else if ((*a)->index >= (end))
-		{
-			ra(a, instruct);
-		}
+			ra(a, ist);
 	}
-	sort_next(a, b, instruct);
+	sort_next(a, b, ist);
 }
 
 void	sort_next(t_node **a, t_node **b, t_lst_instruct **instruct)
