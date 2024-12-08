@@ -6,22 +6,32 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 19:13:08 by cmassol           #+#    #+#             */
-/*   Updated: 2024/12/08 18:47:32 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/12/08 19:19:35 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/checker_bonus.h"
 
+void	free_end(t_node *a, t_node *b, char *line, t_lst_instruct *it)
+{
+	free_nodes(a);
+	free_nodes(b);
+	free(line);
+	free_lst_instruct(it);
+}
+/*
 void	ft_error_bonus(char *line)
 {
 	free(line);
 	write(2, "Error\n", 6);
 	exit(1);
-}
+}*/
 
 void	execute_command(char *line, t_node **a, t_node **b, t_lst_instruct **it)
 {
-	if (ft_strcmp(line, "sa\n") == 0)
+	if (!line)
+		return ;
+	else if (ft_strcmp(line, "sa\n") == 0)
 		sa(a, it);
 	else if (ft_strcmp(line, "sb\n") == 0)
 		sb(b, it);
@@ -43,16 +53,6 @@ void	execute_command(char *line, t_node **a, t_node **b, t_lst_instruct **it)
 		rrb(b, it);
 	else if (ft_strcmp(line, "rrr\n") == 0)
 		rrr(a, b, it);
-	else
-		ft_error_bonus(line);
-}
-
-void	free_end(t_node *a, t_node *b, char *line, t_lst_instruct *it)
-{
-	free_nodes(a);
-	free_nodes(b);
-	free(line);
-	free_lst_instruct(it);
 }
 
 int	main(int ac, char **av)
